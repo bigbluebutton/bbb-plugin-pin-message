@@ -139,7 +139,7 @@ function PluginPinMessage(
               className="pinned-message-content"
               style={{
                 margin: '8px 0',
-                whiteSpace: 'pre-wrap',
+                whiteSpace: 'nowrap',
                 userSelect: 'text',
                 padding: '0 5px',
                 maxWidth: '20em',
