@@ -9,6 +9,7 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import Styled from './styles';
+import { messageToMarkdown } from './service';
 
 interface PluginPinMessageProps {
   pluginUuid: string;
@@ -40,6 +41,7 @@ function PluginPinMessage(
   } = pluginApi.useDataChannel<PinnedMessage>('pinMessage', DataChannelTypes.LATEST_ITEM);
 
   const currentUser = pluginApi.useCurrentUser();
+  const allowedElements = ['a', 'code', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'ol', 'ul', 'p', 'strong'];
 
   useEffect(() => {
     // highlight the pinned message in the chat window
@@ -137,7 +139,7 @@ function PluginPinMessage(
               className="pinned-message-content"
               style={{
                 margin: '8px 0',
-                whiteSpace: 'pre-wrap',
+                whiteSpace: 'nowrap',
                 userSelect: 'text',
                 padding: '0 5px',
                 maxWidth: '20em',
@@ -148,9 +150,10 @@ function PluginPinMessage(
             >
               <Styled.Markdown
                 linkTarget="_blank"
+                allowedElements={allowedElements}
                 unwrapDisallowed
               >
-                {lastPinnedMessage}
+                {messageToMarkdown(lastPinnedMessage)}
               </Styled.Markdown>
             </div>
             <div

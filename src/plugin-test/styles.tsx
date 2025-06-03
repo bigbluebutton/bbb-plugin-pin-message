@@ -45,9 +45,6 @@ const Markdown = styled(ReactMarkdown)`
   & h6 {
     margin: 0;
   }
-    & ul {
-    display: flex;
-  }
 `;
 
 export default {
