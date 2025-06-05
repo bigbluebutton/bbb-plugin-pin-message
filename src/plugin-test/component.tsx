@@ -54,12 +54,20 @@ function PluginPinMessage(
       return;
     }
 
-    const chatListContainer = document.querySelector('#chat-list');
-    const { top, left } = chatListContainer.getBoundingClientRect();
+    // add default position for the floating window
+    let top = 40;
+    let left = 40;
+    // find public chat list button and position the floating window to the right of it
+    const chatListContainer = document.querySelector('#chat-list-0');
+    if (chatListContainer) {
+      const rect = chatListContainer.getBoundingClientRect();
+      top = rect.top;
+      left = rect.right + 5;
+    }
 
     const floatingWindow = new FloatingWindow({
-      top: top - 10,
-      left: left - 10,
+      top,
+      left,
       movable: true,
       backgroundColor: '#f1f1f1',
       boxShadow: '2px 2px 10px #777',
