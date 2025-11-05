@@ -1,6 +1,7 @@
 {
   "requiredSdkVersion": "~0.0.59",
   "name": "PinMessagePlugin",
+  "version": "0.1.0",
   "javascriptEntrypointUrl": "PinMessagePlugin.js",
   "localesBaseUrl": "https://cdn.dominio.com/pluginabc/",
   "eventPersistence": {

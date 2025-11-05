@@ -215,19 +215,21 @@ function PluginPinMessage(
     }
 
     chatMessagesDomElements?.map((chatMessageDomElement) => {
+      const chatMessageContainerDomElement = chatMessageDomElement.parentElement;
+
       // only append if the button is not already there
-      const codeButton = chatMessageDomElement.querySelector('.btn-pin');
+      const codeButton = chatMessageContainerDomElement.querySelector('.btn-pin');
       if (codeButton) {
         return false;
       }
 
-      const toolbar = chatMessageDomElement.querySelector('.chat-message-toolbar');
+      const toolbar = chatMessageContainerDomElement.querySelector('.chat-message-toolbar');
       if (toolbar === null) {
         return false;
       }
 
       // check if the message is pinned
-      const messageId = chatMessageDomElement.dataset.chatMessageId;
+      const messageId = chatMessageContainerDomElement.dataset.chatMessageId;
       const isPinned = pinnedMessageId === messageId;
 
       if (isPinned) {
