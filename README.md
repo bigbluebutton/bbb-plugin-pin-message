@@ -14,7 +14,7 @@ This plugin adds support for **pinning important messages** in the chat during B
 To build the plugin for production use, follow these steps:
 
 ```bash
-cd $HOME/src/pin-message-plugin
+cd $HOME/src/bbb-plugin-pin-message
 npm ci
 npm run build-bundle
 ```
