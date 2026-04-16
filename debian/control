@@ -1,15 +1,15 @@
-Source: bbb-plugin-template
+Source: bbb-plugin-pin-message
 Section: web
 Priority: extra
 Maintainer: Anton Georgiev <anton.georgiev@blindsidenetworks.com>
 Build-Depends: debhelper (>= 13), nodejs (>= 18)
 Standards-Version: 4.1.4
-Homepage: https://github.com/bigbluebutton/plugin-template
+Homepage: https://github.com/bigbluebutton/bbb-plugin-pin-message
 
-Package: bbb-plugin-template
+Package: bbb-plugin-pin-message
 Architecture: all
 Depends: ${misc:Depends}, nodejs
-Description: Share a webpage with all session participants
+Description: Pin important messages in the chat during BigBlueButton conferences
  An official BigBlueButton plugin which allows
- the presenter to display a web page to
- all viewers inside of a session.
+ moderators to pin important messages in the chat
+ so they remain visible at the top of the panel.

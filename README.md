@@ -14,12 +14,12 @@ This plugin adds support for **pinning important messages** in the chat during B
 To build the plugin for production use, follow these steps:
 
 ```bash
-cd $HOME/src/pin-message-plugin
+cd $HOME/src/bbb-plugin-pin-message
 npm ci
 npm run build-bundle
 ```
 
-The above command will generate the `dist` folder, containing the bundled JavaScript file named `PinMessagePlugin.js`. This file can be hosted on any HTTPS server along with its `manifest.json`.
+The above command will generate the `dist` folder, containing the bundled JavaScript file named `BbbPluginPinMessage.js`. This file can be hosted on any HTTPS server along with its `manifest.json`.
 
 If you install the Plugin separated to the manifest, remember to change the `javascriptEntrypointUrl` in the `manifest.json` to the correct endpoint.
 
