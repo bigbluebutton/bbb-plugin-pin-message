@@ -5,8 +5,8 @@ const path = require('path');
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    filename: 'PinMessagePlugin.js',
-    library: 'PinMessagePlugin',
+    filename: 'BbbPluginPinMessage.js',
+    library: 'BbbPluginPinMessage',
     libraryTarget: 'umd',
     publicPath: '/',
     globalObject: 'this',
