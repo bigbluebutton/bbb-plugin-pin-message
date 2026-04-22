@@ -1,3 +1,13 @@
+
+# Note: Pinning chat messages has been implemented in the core of BigBlueButton (instead of a plugin) in BBB 4.0
+This repository will soon be archived
+
+
+
+------------------
+
+
+
 # 📌 BigBlueButton Pinned Messages Plugin
 
 This plugin adds support for **pinning important messages** in the chat during BigBlueButton conferences. Ideal for keeping key information visible in busy sessions such as online classes, webinars, or team meetings.
