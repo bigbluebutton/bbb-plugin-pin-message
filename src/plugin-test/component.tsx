@@ -58,7 +58,7 @@ function PluginPinMessage(
     let top = 40;
     let left = 40;
     // find public chat list button and position the floating window to the right of it
-    const chatListContainer = document.querySelector('#chat-list-0');
+    const chatListContainer = document.querySelector('#chat-list');
     if (chatListContainer) {
       const rect = chatListContainer.getBoundingClientRect();
       top = rect.top;
