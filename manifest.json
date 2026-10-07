@@ -1,22 +1,27 @@
 {
   "requiredSdkVersion": "^1.0.0-beta.2",
   "name": "BbbPluginPinMessage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "javascriptEntrypointUrl": "BbbPluginPinMessage.js",
   "localesBaseUrl": "https://cdn.dominio.com/pluginabc/",
   "eventPersistence": {
-      "isEnabled": true,
-      "maximumPayloadSizeInBytes": 1024,
-      "rateLimiting": {
-          "messagesAllowedPerSecond": 10,
-          "messagesAllowedPerMinute": 20
-      }
+    "isEnabled": true,
+    "maximumPayloadSizeInBytes": 1024,
+    "rateLimiting": {
+      "messagesAllowedPerSecond": 10,
+      "messagesAllowedPerMinute": 20
+    }
   },
   "dataChannels": [
     {
-        "name": "pinMessage",
-        "pushPermission": ["moderator"],
-        "replaceOrDeletePermission": ["creator", "moderator"]
+      "name": "pinMessage",
+      "pushPermission": [
+        "moderator"
+      ],
+      "replaceOrDeletePermission": [
+        "creator",
+        "moderator"
+      ]
     }
-]
+  ]
 }
