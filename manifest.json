@@ -1,7 +1,7 @@
 {
   "requiredSdkVersion": "^1.0.0-beta.2",
   "name": "BbbPluginPinMessage",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "javascriptEntrypointUrl": "BbbPluginPinMessage.js",
   "localesBaseUrl": "https://cdn.dominio.com/pluginabc/",
   "eventPersistence": {
